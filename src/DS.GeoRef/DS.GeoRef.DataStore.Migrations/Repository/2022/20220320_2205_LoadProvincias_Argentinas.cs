@@ -18,6 +18,7 @@ namespace DS.GeoRef.DataStore.Migrations.Repository._2022
         public override void Up()
         {
             var countryRegistry = new CountryDapperRepository(ConnectionString);
+           
             var baseUrl = "https://apis.datos.gob.ar/georef/api";
             var segmentProvincias = "/provincias?campos=id,nombre";
             var provinciaDgaRepository = new Source.ARG.DGA.ProvinciaDgaRepository(baseUrl, segmentProvincias);

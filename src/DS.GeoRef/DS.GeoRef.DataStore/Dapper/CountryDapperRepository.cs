@@ -12,7 +12,7 @@ namespace DS.GeoRef.DataStore.Dapper
         public CountryDapperRepository(string connectionString)
         {
             var connection = DbConnectionFactory.Create(connectionString);
-            var provincias = connection.Query<dynamic>("select id, code, name from pais");
+            var provincias = connection.Query<dynamic>("select id, code, name from pais").AsList();
             foreach (var p in provincias)
             {
                 registry.Add(p.code, p);
