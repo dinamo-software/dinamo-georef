@@ -23,10 +23,10 @@ namespace DS.GeoRef.Controllers.ApiSurface
                 var connectionString = coniguration.GetConnectionString("GeoRef");
                 var repo = new ProvinciaDapperRepository(connectionString);
 
-                var result = new List<string>();
-                repo.AllKeys().ForEach(key => result.Add(repo.Get(key).name));
+                var result = new List<dynamic>();
+                repo.AllKeys().ForEach(key => result.Add(repo.Get(key)));
 
-                return Ok(result);
+                return Ok(result.Select(x=>new { x.code, x.name }));
 
             }
             catch (Exception ex)

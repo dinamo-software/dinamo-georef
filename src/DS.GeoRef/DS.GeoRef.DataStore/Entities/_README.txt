@@ -1,0 +1,2 @@
+﻿Las "Entities" son las clases que funcionan como DTO de los datos obtenidos desde una tabla de la base de datos con objetivo de transferir esos datos a otras capas del sistema.
+Generalmente cuando llegan a los "Controllers" son transformadas en "Contracts" que son los DTO que efectivamente transportan datos fuera del sistema, aunque para reducir el tiempo de desarrollo, si la Entity ya tiene todos los datos que quiero transmitir fuera del sistema, no necesito el Contact

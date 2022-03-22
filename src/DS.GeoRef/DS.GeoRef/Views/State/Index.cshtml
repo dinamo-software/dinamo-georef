@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "States";
+}
+@model IEnumerable<dynamic>
+
+<div class="text-left">
+    <h4 class="display">States</h4>
+    <table id="state-table" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var state in Model)
+            {
+                <tr>
+                    <td>@state.code</td>
+                    <td>@state.name</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+@section Scripts
+{
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#state-table').DataTable();
+        });
+    </script>
+}
