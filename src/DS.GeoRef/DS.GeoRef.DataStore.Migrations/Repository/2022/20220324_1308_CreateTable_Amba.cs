@@ -20,13 +20,9 @@ namespace DS.GeoRef.DataStore.Migrations.Repository._2022
     {
         public override void Up()
         {
-
             Create.Table("amba")
-                .WithColumn("id").AsInt32().NotNullable().PrimaryKey("PK_municipio")
-                .WithColumn("code").AsString(10).NotNullable().Unique() //GeoRefAr Code
-                .WithColumn("name").AsString(100).NotNullable()
-                .WithColumn("desc").AsString(500).Nullable()
-                .WithColumn("provincia_id").AsInt32().NotNullable().ForeignKey("FK_municipio_provincia", "provincia", "id");
+                .WithColumn("id").AsInt32().NotNullable().PrimaryKey("PK_amba")
+                .WithColumn("municipio_code").AsString(10).NotNullable().Unique();
         }
 
         public override void Down()
