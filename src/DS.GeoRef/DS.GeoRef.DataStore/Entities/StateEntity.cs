@@ -9,6 +9,7 @@ namespace DS.GeoRef.DataStore.Entities
     /// </summary>
     public class StateEntity
     {
+        public int id { get; set; }
         public string code { get; set; }
         public string name { get; set; }
     }
