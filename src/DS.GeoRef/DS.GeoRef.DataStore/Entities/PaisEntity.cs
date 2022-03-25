@@ -7,7 +7,7 @@ namespace DS.GeoRef.DataStore.Entities
     /// <summary>
     /// Entity que contiene los datos que necesito de un Country
     /// </summary>
-    public class CountryEntity
+    public class PaisEntity
     {
         public int id { get; set; }
         public string code { get; set; }

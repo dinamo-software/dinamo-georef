@@ -8,12 +8,12 @@ namespace DS.GeoRef.DataStore.Dapper
 {
     public class CountryDapperRepository
     {
-        private Dictionary<string, CountryEntity> registry = new Dictionary<string, CountryEntity>();
+        private Dictionary<string, PaisEntity> registry = new Dictionary<string, PaisEntity>();
 
         public CountryDapperRepository(string connectionString)
         {
             var connection = DbConnectionFactory.Create(connectionString);
-            var provincias = connection.Query<CountryEntity>("select id, code, name, iso_alfa_2 from pais").AsList();
+            var provincias = connection.Query<PaisEntity>("select id, code, name, iso_alfa_2 from pais").AsList();
             foreach (var p in provincias)
             {
                 registry.Add(p.code, p);
@@ -25,7 +25,7 @@ namespace DS.GeoRef.DataStore.Dapper
             return registry.Keys.AsList();
         }
 
-        public List<CountryEntity> All()
+        public List<PaisEntity> All()
         {
             return registry.Values.AsList();
         }

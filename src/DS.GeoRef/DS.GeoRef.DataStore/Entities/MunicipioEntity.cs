@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DS.GeoRef.DataStore.Entities
 {
-    public class CountyEntity
+    public class MunicipioEntity
     {
         public int id { get; set; }
         public string code { get; set; }

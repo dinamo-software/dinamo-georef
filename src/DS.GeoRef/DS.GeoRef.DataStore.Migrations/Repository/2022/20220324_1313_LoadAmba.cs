@@ -18,46 +18,287 @@ namespace DS.GeoRef.DataStore.Migrations.Repository._2022
         public override void Up()
         {
             var sequence = new Helpers.SequenceHelper();
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.AlmiranteBrown });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Avellaneda });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Berazategui });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Berisso });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Brandsen });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Campana });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Canuelas });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Ensenada });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Escobar });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.EstebanEcheverria });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.ExaltacionDeLaCruz });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Ezeiza });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.FlorencioVarela });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.GeneralLasHeras });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.GeneralRodriguez });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.GeneralSanMartin });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Hurlingham });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Ituzaingo });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.JoseCPaz });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.LaMatanza });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Lanus });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.LaPlata });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.LomasDeZamora });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Lujan });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.MalvinasArgentinas });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.MarcosPaz });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Merlo });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Moreno });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Moron });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Pilar });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.PresidentePeron });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Quilmes });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.SanFernando });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.SanIsidro });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.SanMiguel });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.SanVicente });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Tigre });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.TresdeFebrero });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.VicenteLopez });
-            Insert.IntoTable("amba").Row(new { id = sequence.Next(), municipio_code = MunicipiosConstants.Zarate });
+            
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.AlmiranteBrown,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Avellaneda,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+            
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Berazategui,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Berisso,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Brandsen,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Campana,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Canuelas,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+            
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Ensenada,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Escobar,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.EstebanEcheverria,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.ExaltacionDeLaCruz,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Ezeiza,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.FlorencioVarela,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.GeneralLasHeras,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.GeneralRodriguez,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.GeneralSanMartin,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Hurlingham,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Ituzaingo,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.JoseCPaz,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.LaMatanza,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Lanus,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.LaPlata,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.LomasDeZamora,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Lujan,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.MalvinasArgentinas,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.MarcosPaz,
+                zona_code = ZonasConstants.Oeste,
+                cordon_code = "03"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Merlo,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Moreno,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Moron,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Pilar,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.PresidentePeron,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Quilmes,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.SanFernando,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.SanIsidro,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.SanMiguel,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.SanVicente,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Tigre,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.TresdeFebrero,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.VicenteLopez,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
+            Insert.IntoTable("amba").Row(new { 
+                id = sequence.Next(), 
+                municipio_code = MunicipiosConstants.Zarate,
+                zona_code = ZonasConstants.Sur,
+                cordon_code = "01"
+            });
+
         }
 
         public override void Down()

@@ -22,7 +22,9 @@ namespace DS.GeoRef.DataStore.Migrations.Repository._2022
         {
             Create.Table("amba")
                 .WithColumn("id").AsInt32().NotNullable().PrimaryKey("PK_amba")
-                .WithColumn("municipio_code").AsString(10).NotNullable().Unique();
+                .WithColumn("municipio_code").AsString(10).NotNullable().Unique()
+                .WithColumn("zona_code").AsString(10).NotNullable()
+                .WithColumn("cordon_code").AsString(10).NotNullable();
         }
 
         public override void Down()

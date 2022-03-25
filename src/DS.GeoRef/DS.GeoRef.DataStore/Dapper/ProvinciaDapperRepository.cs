@@ -8,12 +8,12 @@ namespace DS.GeoRef.DataStore.Dapper
 {
     public class ProvinciaDapperRepository
     {
-        private Dictionary<string, StateEntity> registroDeProvincias = new Dictionary<string, StateEntity>();
+        private Dictionary<string, ProvinciaEntity> registroDeProvincias = new Dictionary<string, ProvinciaEntity>();
 
         public ProvinciaDapperRepository(string connectionString)
         {
             var connection = DbConnectionFactory.Create(connectionString);
-            var provincias = connection.Query<StateEntity>("select id, code, name from provincia");
+            var provincias = connection.Query<ProvinciaEntity>("select id, code, name from provincia");
             foreach (var p in provincias)
             {
                 registroDeProvincias.Add(p.code, p);
@@ -25,7 +25,7 @@ namespace DS.GeoRef.DataStore.Dapper
             return registroDeProvincias.Keys.AsList();
         }
 
-        public List<StateEntity> All()
+        public List<ProvinciaEntity> All()
         {
             return registroDeProvincias.Values.AsList();
         }
