@@ -4,8 +4,7 @@ using System.Text;
 
 namespace DS.GeoRef.DataStore.Migrations.Constants
 {
-    //Tuve que buscar todas los id con el SQL y me comentaste que habia una forma mas rapida de hacerlo
-    //Como puedo llamar a todas estas contantes desde otra clase? 
+   
     public class MunicipiosConstants
     {
         public const string AlmiranteBrown = "060028";
