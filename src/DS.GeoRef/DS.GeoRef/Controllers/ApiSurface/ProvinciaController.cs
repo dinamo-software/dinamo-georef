@@ -37,28 +37,10 @@ namespace DS.GeoRef.Controllers.ApiSurface
         }
 
         // GET api/<ProvinciasController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{code}")]
+        public string Get(string code)
         {
-            return "value" + id.ToString();
-        }
-
-        // POST api/<ProvinciasController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<ProvinciasController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<ProvinciasController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return "value" + code.ToString();
         }
     }
 }
