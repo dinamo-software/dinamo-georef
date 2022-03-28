@@ -29,6 +29,18 @@ namespace DS.GeoRef
             var fluentMigratorUpdater = new FluentMigratorUpdater(Configuration.GetConnectionString("GeoRef"));
             fluentMigratorUpdater.Run();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOriginsPolicy",
+                    builder =>
+                    {
+                        builder
+                            .AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .SetPreflightMaxAge(TimeSpan.FromDays(1));
+                    });
+            });
             services.AddControllersWithViews();
             services.Configure<RazorViewEngineOptions>(options => {
                 options.ViewLocationFormats.Add("/Views/_Shared/{0}.cshtml");
@@ -53,6 +65,7 @@ namespace DS.GeoRef
 
             app.UseRouting();
 
+            app.UseCors("AllowAllOriginsPolicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
