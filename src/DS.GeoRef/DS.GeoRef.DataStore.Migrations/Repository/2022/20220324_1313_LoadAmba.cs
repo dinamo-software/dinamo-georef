@@ -178,7 +178,7 @@ El Segundo Cordón: Quilmes, Berazategui, Florencio Varela, Esteban Echeverría,
             Insert.IntoTable("amba").Row(new { 
                 id = sequence.Next(), 
                 municipio_code = MunicipiosConstants.LaPlata,
-                zona_code = ZonasConstants.Centro,
+                zona_code = ZonasConstants.Sur,
                 cordon_code = "03"
             });
 

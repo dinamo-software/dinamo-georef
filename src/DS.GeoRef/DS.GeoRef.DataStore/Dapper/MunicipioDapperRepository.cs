@@ -40,6 +40,13 @@ namespace DS.GeoRef.DataStore.Dapper
             return amba;
         }
 
+        public List<string> AllGlpKeys()
+        {
+            var connection = DbConnectionFactory.Create(this.connectionStringInternal);
+            var amba = connection.Query<string>("select municipio_code from glp").AsList();
+            return amba;
+        }
+
         public dynamic Get(string key)
         {
             return registroDeMunicipios[key];
