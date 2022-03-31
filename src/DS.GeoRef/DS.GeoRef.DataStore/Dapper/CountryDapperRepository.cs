@@ -12,8 +12,8 @@ namespace DS.GeoRef.DataStore.Dapper
 
         public CountryDapperRepository(string connectionString)
         {
-            var connection = DbConnectionFactory.Create(connectionString);
-            var provincias = connection.Query<PaisEntity>("select id, code, name, iso_alfa_2 from pais").AsList();
+            var connection = DbConnectionFactory.Create(connectionString); //Genera conexion a la base de datos
+            var provincias = connection.Query<PaisEntity>("select id, code, name, iso_alfa_2 from pais").AsList(); //Realizo una consulta
             foreach (var p in provincias)
             {
                 registry.Add(p.code, p);

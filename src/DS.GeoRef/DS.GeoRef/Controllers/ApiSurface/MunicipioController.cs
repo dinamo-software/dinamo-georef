@@ -16,14 +16,15 @@ namespace DS.GeoRef.Controllers.ApiSurface
     public class MunicipioController : ControllerBase
     {
         [HttpGet]
-        [Route("all")]
+        [Route("all")] //-> ENDPOINT ES LA URL COMPLETA APUNTANDO A UN PATH ESPECIFICO -> TE MAPEA CONTRA UN ACTION
         public IActionResult Get([FromServices] IConfiguration coniguration)
+            //EL METODO QUE DEVUELVE UN IACTIONRESULT SE CONSIDERA UN ACTION
         {
             try
             {
                 var connectionString = coniguration.GetConnectionString("GeoRef");
-                var repo = new MunicipioDapperRepository(connectionString);
-
+                var repo = new MunicipioDapperRepository(connectionString); // La capa controller hace uso de la capa repository
+                                                                            // instanciando su objeto.
                 var result = new List<dynamic>();
                 repo.AllKeys().ForEach(key => result.Add(repo.Get(key)));
 
