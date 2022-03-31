@@ -1,0 +1,19 @@
+Mostrar al usuario la organizacion politica de la Argentina en sus 4 niveles. 
+Pais->Provincia->Municipio-//-> Localidad
+
+Poder definir regiones como conjunto de entidades territoriales del mismo nivel -> AMBA -> GLP (Gran La Plata) 
+
+Sustentado por leyes, no es aleatorio.
+-------------------------------------------------------------
+Municipio es aquella divicion territorial con su propia casa de gobierno
+(La Matanza tiene un municipio, y sus localidad son por ejemplo Ramos Mejia, Lomas del Mirador, La Ferrere, San Justo)
+--------------------------------------------------------------
+
+Pasos al momento de armar un sistema
+
+1- Definir el objetivo del sistema
+2-Relevamiento de los usuarios (Se hacen preguntas a los usuarios) 
+3-Documentar el relevamiento en casos de uso, detallando donde  sea       necesario. (Importante) 
+4-Diseño de la base de datos (Especificacion tecnica de como va a ser la     estructura de las tablas ->Nombres de las tablas, campos y sus nombes,     tipo de dato de cada campo, restricciones de cada campo) 
+5-Boceto de la interfaz grafica (MENUS -> LISTADOS) 
+6-Identificar "MAESTROS": Son los datos que no van a variar con la operación del sistema. (En nuestro caso son las tablas Pais, Provinicia, Municipio, Localidad, Regiones)
