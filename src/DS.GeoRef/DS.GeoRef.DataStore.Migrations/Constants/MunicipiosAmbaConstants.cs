@@ -5,7 +5,7 @@ using System.Text;
 namespace DS.GeoRef.DataStore.Migrations.Constants
 {
    
-    public class MunicipiosConstants
+    public class MunicipiosAmbaConstants
     {
         public const string AlmiranteBrown = "060028";
         public const string Avellaneda = "060035";
