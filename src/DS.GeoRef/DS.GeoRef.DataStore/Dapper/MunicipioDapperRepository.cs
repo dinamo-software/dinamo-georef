@@ -36,15 +36,15 @@ namespace DS.GeoRef.DataStore.Dapper
         public List<string> AllAmbaKeys()
         {
             var connection = DbConnectionFactory.Create(this.connectionStringInternal);
-            var amba = connection.Query<string>("select municipio_code from amba").AsList();
-            return amba;
+            var codigosDeMunicipiosDelAmba = connection.Query<string>("select municipio_code from amba").AsList();
+            return codigosDeMunicipiosDelAmba;
         }
 
         public List<string> AllGlpKeys()
         {
             var connection = DbConnectionFactory.Create(this.connectionStringInternal);
-            var amba = connection.Query<string>("select municipio_code from glp").AsList();
-            return amba;
+            var codigosDeMunicipiosDeGLP = connection.Query<string>("select municipio_code from glp").AsList();
+            return codigosDeMunicipiosDeGLP;
         }
 
         public dynamic Get(string key)

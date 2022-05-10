@@ -21,21 +21,21 @@ namespace DS.GeoRef.DataStore.Migrations.Repository._2022
             
             Insert.IntoTable("glp").Row(new { 
                 id = sequence.Next(), 
-                municipio_code = MunicipiosConstants.LaPlata,
+                municipio_code = MunicipiosAmbaConstants.LaPlata,
                 zona_code = ZonasConstants.Sur,
                 cordon_code = "03"
             });
 
             Insert.IntoTable("glp").Row(new { 
                 id = sequence.Next(), 
-                municipio_code = MunicipiosConstants.Berisso,
+                municipio_code = MunicipiosAmbaConstants.Berisso,
                 zona_code = ZonasConstants.Sur,
                 cordon_code = "03"
             });
             
             Insert.IntoTable("glp").Row(new { 
                 id = sequence.Next(), 
-                municipio_code = MunicipiosConstants.Ensenada,
+                municipio_code = MunicipiosAmbaConstants.Ensenada,
                 zona_code = ZonasConstants.Sur,
                 cordon_code = "03"
             });

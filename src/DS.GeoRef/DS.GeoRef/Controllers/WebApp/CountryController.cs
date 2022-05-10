@@ -25,7 +25,8 @@ namespace DS.GeoRef.Controllers
         {
             var connectionString = _configuration.GetConnectionString("GeoRef");
             var repo = new CountryDapperRepository(connectionString);
-            var result = repo.All();
+            var result = repo.All(); // ¿Como hago para enviar mas de un result distinto a la vista? por ejemplo
+                                                 // lista de paises y municipios
             return View(result);
         }
         

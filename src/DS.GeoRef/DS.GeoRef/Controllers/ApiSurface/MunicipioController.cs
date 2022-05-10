@@ -13,7 +13,7 @@ namespace DS.GeoRef.Controllers.ApiSurface
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MunicipioController : ControllerBase
+    public class MunicipioController : ControllerBase  // @controller
     {
         [HttpGet]
         [Route("all")] //-> ENDPOINT ES LA URL COMPLETA APUNTANDO A UN PATH ESPECIFICO -> TE MAPEA CONTRA UN ACTION
