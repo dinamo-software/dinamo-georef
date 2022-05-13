@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "GeoRef": "Data Source=.;Initial Catalog=GeoRef; Integrated Security=True;"
+  }
+}

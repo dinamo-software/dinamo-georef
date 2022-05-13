@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Countries";
+}
+@model IEnumerable<dynamic>
+
+<div class="text-left">
+    <h4 class="display">Countries</h4>
+    <hr />
+    <table id="country-table" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var country in Model)
+            {
+                <tr>
+                    <td>@country.code</td>
+                    <td>@country.name</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+@section Scripts
+{
+<script>
+    $(document).ready(function () {
+        $('#country-table').DataTable();
+    });
+</script>
+}
