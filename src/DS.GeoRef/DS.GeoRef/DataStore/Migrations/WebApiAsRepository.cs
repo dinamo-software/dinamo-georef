@@ -120,7 +120,7 @@ namespace DS.GeoRef.DataStore.Migrations
             }
             catch (Exception ex)
             {
-                var exMsg = string.Format("{0}: request error", api);
+                var exMsg = string.Format("{0}: request error ({1})", api, ex.Message);
                 this.errors.Add(exMsg);
                 throw;
             }
